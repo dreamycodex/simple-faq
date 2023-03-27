@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="index.css" />
+    <title>FAQ using SCSS</title>
+  </head>
+  <body>
+    <h1>Frequently Asked Questions</h1>
+    <section>
+      <div class="status"></div>
+      <div class="container">
+        <h3>Do owls have eyeballs?</h3>
+        <div class="info">
+          <p>
+            What they have instead are better described as eye tubes. Since they
+            can't move these tubes back and forth, owls have developed
+            incredible neck flexibility to be able to see the world around them.
+            They can turn their heads a whopping 270 degrees, whereas humans can
+            only manage about 180. As a result, owls have a special blood vessel
+            system in their heads to keep fresh blood circulating to the brain
+            when a quick head turn cuts off circulation.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="status"></div>
+      <div class="container">
+        <h3>How do baby giraffes sleep?</h3>
+        <div class="info">
+          <p>
+            While adult giraffes usually sleep standing up, baby giraffes will
+            get a bit more comfortable. They hunker down on the ground and take
+            advantage of their extra-flexible necks, twisting around to plop
+            their noggins on their own behinds. It doesn't look especially
+            comfortable, but it sure does look cute!
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="status"></div>
+      <div class="container">
+        <h3>How long your hair grow in a lifetime?</h3>
+        <div class="info">
+          <p>
+            The average person will grow 590 miles of hair in their lifetime,
+            according to The Express. Presumably this is cumulative of each hair
+            on your body laid end to end. Nose hairs alone contribute 6.5 feet
+            of the total.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="status"></div>
+      <div class="container">
+        <h3>
+          What is a does a length of a day is on Venus as compared to on Earth?
+        </h3>
+        <div class="info">
+          <p>
+            On Earth, it only seems like a day can last longer than a whole
+            year. In reality, our planet rotates on its axis once every 24 hours
+            and makes one complete revolution around the sun every 365.25 days.
+          </p>
+        </div>
+      </div>
+    </section>
+    <script>
+      const questions = document.querySelectorAll("section");
+
+      questions.forEach((question) => {
+        const opener = question.querySelector("h3");
+        opener.addEventListener("click", () => {
+          [...questions]
+            .filter((q) => q !== question)
+            .forEach((q) => q.classList.remove("opened"));
+          question.classList.toggle("opened");
+        });
+      });
+    </script>
+  </body>
+</html>
